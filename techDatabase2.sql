@@ -33,7 +33,7 @@ create table products(
 
 create table Orders(
 orderNumber int NOT NULL AUTO_INCREMENT,
-theDate timestamp NOT NULL,
+theDate GETDATE(),
 userID int NOT NULL,
 taxRate DOUBLE NOT NULL,
 totalCost Double NOT NULL,
@@ -50,7 +50,7 @@ CONSTRAINT fk_user FOREIGN KEY (UserID) REFERENCES Users (userID) on delete casc
 
 create table AnomyOrders(
 orderNumber int NOT NULL AUTO_INCREMENT,
-theDate timestamp NOT NULL,
+theDate GETDATE(),
 customerName varchar(25) NOT NULL,
 customerAddr varchar(50) NOT NULL,
 cuatomerCity varchar(20) NOT NULL,
